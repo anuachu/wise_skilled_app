@@ -1,5 +1,6 @@
 const state = {
-  profiles: []
+  profiles: [],
+  loggedInUserName: null
 }
 
 fetch('/api/profiles')
@@ -8,3 +9,11 @@ fetch('/api/profiles')
     state.profiles = profiles
     renderProfileList()
   })
+
+fetch('/api/sessions')
+  .then(res => res.json())
+  .then(userName => {
+    if (typeof userName === 'string') {
+      state.loggedInUserName = userName
+    }
+})
