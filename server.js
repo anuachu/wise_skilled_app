@@ -2,7 +2,8 @@ const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 3000;
 
-
+//Controllers
+const profilesController = require('./controllers/profiles_controller')
 const logger = require('./middlewares/logger')
 
 app.listen(PORT,
@@ -12,3 +13,5 @@ app.listen(PORT,
 app.use(logger)
 app.use(express.static('client'))
 app.use(express.json())
+
+app.use('/api/profiles', profilesController)
