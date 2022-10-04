@@ -13,6 +13,7 @@ function renderProfileList() {
       <section class='profile' data-id='${profile.id}'>
         <header>
           <h2>${profile.headline}</h2>
+          <span onClick="editProfile(event)">edit</span>
           <span onClick="deleteProfile(event)">delete</span>
         </header>
         <p>${profile.skills_summary}</p>
