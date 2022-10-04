@@ -15,5 +15,5 @@ CREATE TABLE profiles(
   location TEXT,
   profile_img TEXT,
   rate REAL,
-  contact, TEXT
-)
+  contact TEXT
+);
