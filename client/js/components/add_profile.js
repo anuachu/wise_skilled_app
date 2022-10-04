@@ -27,6 +27,7 @@ function renderAddProfile() {
         <label for="">Contact: </label>
         <input type="text" name="contact">
       </fieldset>
+      <button>Add Profile</button>
     </form>
   </section>
   `
@@ -40,12 +41,12 @@ function createProfile(event) {
 
   fetch('/api/profiles', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json'},
-    body: JSON.stringify(data)
-  })
-    .then(res => res.json())
-    .then(profiles => {
-      state.profiles.psuh(profile)
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    })
+      .then(res => res.json())
+      .then(profile => {
+      state.profiles.push(profile)
       renderProfileList()
     })
 }

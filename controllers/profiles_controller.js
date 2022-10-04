@@ -19,4 +19,12 @@ router.post('/', (req, res) => {
     .then(profile => res.json(profile))
 })
 
+router.delete('/:id', (req, res) => {
+  const profileId = req.params.id
+
+  Profile
+    .delete(profileId)
+    .then(() => res.json({ message: 'deleted successfully'}))
+})
+
 module.exports = router

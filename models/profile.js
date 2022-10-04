@@ -19,6 +19,13 @@ const Profile = {
       .query(sql, [headline, skills_summary, location, profile_img, rate, contact])
       .then(dbRes => dbRes.rows[0])
   
+  },
+
+  delete: profileId => {
+    const sql = `
+    DELETE FROM profiles WHERE id = $1
+    `
+    return db.query(sql, [profileId])
   }
 }
 
