@@ -6,42 +6,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wise Skills</title>
+
+  <script src="/js/initialize.js"></script>
+  <script defer src="/js/components/add_profile.js"></script>
+  <script defer src="/js/components/profile_list.js"></script>
 </head>
 
 <body>
   <h1>Wise Skills</h1>
-  <section class="profile-list"></section>
+  <nav class="header-nav">
+    <ul>
+      <li onClick="renderAddProfile()">Add Profile</li>
+      <li onClick="renderProfileList()">View Profile</li>
+    </ul>
+  </nav>
 
-  <script>
-    const state = {
-      profiles: []
-    }
+  <main id="page" class="content"></main>
 
-    fetch('/api/profiles')
-      .then(res => res.json())
-      .then(profiles => {
-        state.profiles = profiles
-        renderProfileList()
-      })
 
-    function renderProfileList() {
-      const profileListDOM = document.querySelector('.profile-list')
-
-      profileListDOM.innerHTML = state.profiles.map(profile => `
-        <section class='profile'>
-          <header>
-            <h2>${profile.headline}</h2>
-          </header>
-          <p>${profile.skills_summary}</p>
-          <p>${profile.location}</p>
-          <p>${profile.rate}</p>
-          <p>${profile.contact}</p>
-          <img src="${profile.profile_img}">
-
-        </section>
-      `).join('')
-    }
-  </script>
 </body>
 
 </html> 
