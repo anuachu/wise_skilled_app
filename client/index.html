@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Wise Skills</title>
 </head>
+
 <body>
-  
+  <h1>Wise Skills</h1>
+  <section class="profile-list"></section>
+
+  <script>
+    const state = {
+      profiles: []
+    }
+
+    fetch('/api/profiles')
+      .then(res => res.json())
+      .then(profiles => {
+        state.profiles = profiles
+        renderProfileList()
+      })
+
+    function renderProfileList() {
+      const profileListDOM = document.querySelector('.profile-list')
+
+      profileListDOM.innerHTML = state.profiles.map(profile => `
+        <section class='profile'>
+          <header>
+            <h2>${profile.headline}</h2>
+          </header>
+          <p>${profile.skills_summary}</p>
+          <p>${profile.location}</p>
+          <p>${profile.rate}</p>
+          <p>${profile.contact}</p>
+          <img src="${profile.profile_img}">
+
+        </section>
+      `).join('')
+    }
+  </script>
 </body>
-</html>
+
+</html> 
