@@ -27,4 +27,21 @@ router.delete('/:id', (req, res) => {
     .then(() => res.json({ message: 'deleted successfully'}))
 })
 
+// router.get('/:id/edit', (req,res) => {
+//   const profileId = req.params.id
+  
+//   Profile
+//     .get_profile(profileId)
+//     .then(profiles => res.json(profiles))
+// })
+
+router.put('/:id', (req,res) => {
+  const profileId = req.params.id
+  const { headline, skills_summary, location, profile_img, rate, contact } = req.body
+  
+  Profile
+    .update_profile(profileId,headline, skills_summary, location, profile_img, rate, contact ) 
+    .then(profile => res.json(profile))
+})
+
 module.exports = router
