@@ -8,12 +8,12 @@ function renderProfileList() {
 }   
     
   function renderProfiles() {  
-
-    return state.profiles.map(profile =>`
+    
+  return state.profiles.map(profile =>`
       <section class='profile' data-id='${profile.id}'>
         <header>
           <h2>${profile.headline}</h2>
-          <span onClick="editProfile(event)">edit</span>
+          <span onClick="renderEditProfile(${profile.id})">edit</span>
           <span onClick="deleteProfile(event)">delete</span>
         </header>
         <p>${profile.skills_summary}</p>
@@ -39,3 +39,19 @@ function deleteProfile(event) {
       renderProfileList()
     })
 }
+
+// function editProfile(event) {
+//   const editBtn = event.target
+//   const profileDom = editBtn.closest('.profile')
+//   const profileId = profileDom.dataset.id
+  
+
+//   fetch(`/api/profiles/${profileId}/edit`, {
+//     method: 'GET'
+//   })
+//   .then(() =>{
+//     state.profiles = state.profiles.filter(p =>
+//     p.id == profileId)
+//     renderEditProfile()
+//   })
+// }
