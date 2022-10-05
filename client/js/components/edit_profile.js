@@ -59,6 +59,6 @@ function updateProfile(event) {
       .then(res => res.json())
       .then(profile => {
         state.profiles[profileIndex] = profile
-        renderFrameworkList()
+        renderProfileList()
     })
 }
