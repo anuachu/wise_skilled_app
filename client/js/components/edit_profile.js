@@ -1,7 +1,20 @@
-function renderEditProfile(profileId) {
+const getAuthor =
+
+function renderEditProfile() {
   const profileListDOM = document.querySelector('#page')
+
+  const author = 
+  //Need to get author column from profiles database
+  
+  console.log(state.loggedInUserName) // Works when logged in, can use in if statement
+
+  //if state.loggedInUserName matches author colomn render those posts for that author.
+
+  console.log(author) //Testing
+  // if (state.loggedInUserName == author){}
+//********************* */
   profileListDOM.innerHTML =
-  state.profiles.map(profile =>
+  state.profiles.map(profile => //map may not be the right option for this
   `<section class="profile">
     <form onSubmit="updateProfile(event)">
       <h2>Edit product</h2>
@@ -30,7 +43,7 @@ function renderEditProfile(profileId) {
       <label for="">Contact: </label>
       <input type="text" name="contact" value="${profile.contact}">
     </fieldset>
-        <input type="hidden" name="id" value="${profileId}">
+        <input type="hidden" name="id" value="${profile.id}"> 
         <button type="submit">Update product</button>
     </form>
   </section>
