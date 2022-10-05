@@ -9,20 +9,24 @@ body {
   font-family: 'Exo', sans-serif;
 }
 
-h1 {
-  text-align: center;
+.home a {
+  text-decoration: none;
   font-family: 'Playfair Display', serif;
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 3rem;
   color: #FBD2C9;
   letter-spacing: 50%;
   text-shadow: 4px 4px 4px #313E61;
-  /* border: 1px solid #313E61;
-  background-color: #313E61; */
-  border: 1px solid #774A62;
-  background-color: #774A62;
-  border-radius: 4px;
 }
+
+.home {
+  padding: 0 20px;
+  background-color: #774A62;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+
 
 h2 {
   white-space: nowrap;
@@ -43,4 +47,57 @@ form fieldset {
 form input {
   padding: 0.5rem;
   width: 100%;
+}
+
+#hamburguer-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+
+#hamburguer-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: #FBD2C9;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: 100%;
+  
+}
+
+@media only screen and (max-width: 600px) {
+  header nav {
+    display: none;
+  }
+  #hamburguer-icon {
+    display: block;
+  }
 }

@@ -30,37 +30,39 @@
 </head>
 
 <body>
-  <h1>Wise Skills</h1>
-  <nav class="header-nav">
-    <ul>
-      <span>
-        <li class="material-symbols-outlined edit-profile" onClick="renderProfileList()">Home</li>
-        Home
-      </span>
-      <span>
-        <li class="material-symbols-outlined add-profile" onClick="renderAddProfile()">add_circle</li>
-        Add Profile
-      </span>
-      <span>
-        <li class="material-symbols-outlined sign-up" onClick="renderSignUp()">person_add</li>
-        Sign-Up
-      </span>
-      <span>
-        <li class="material-symbols-outlined login" onClick="renderLogin()">account_circle</li>
-        Login
-      </span>
-      <span>
-        <li class="material-symbols-outlined edit-profile" onClick="renderEditProfile()">Edit Profile</li>
-        Home
-      </span>
-      
-    </ul>
-   
-  </nav>
+  <header class="home">
+    <div id="logo"><a href="/">Wise Skills</a></div>
+    <!-- <h1>Wise Skills</h1> -->
+    <nav class="header-nav">
+      <ul>
+        <li onClick="renderProfileList()"> <span class="material-symbols-outlined edit-profile" >home</span> Home
+        </li>
+        <li onClick="renderAddProfile()"> <span class="material-symbols-outlined edit-profile" >add_circle</span> Add Profile
+        </li>
+        <li onClick="renderSignUp()"> <span class="material-symbols-outlined edit-profile" >person_add</span> Sign-Up
+        </li>
+        <li onClick="renderLogin()"> <span class="material-symbols-outlined edit-profile" >account_circle</span> Login
+        </li>
+        <li onClick="renderEditProfile()"> <span class="material-symbols-outlined edit-profile" >edit</span> Edit Profile
+        </li>
+      </ul>
+    </nav>
+    <div id="hamburguer-icon" onclick="toggleMobileMenu(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+      <ul class="mobile-menu">
+        <li onClick="renderProfileList()">Home</li>
+        <li onClick="renderAddProfile()">Add profile</li>
+        <li onClick="renderSignUp()">Sign-Up</li>
+        <li onClick="renderLogin()">Login</li>
+        <li onClick="renderEditProfile()">Edit</li>
+      </ul>
+    </div>    
+</header>
+<script src="index_mobile.js"></script>
 
-  <main id="page" class="content"></main>
-
-
+<main id="page" class="content"></main>
 </body>
 
 </html> 
