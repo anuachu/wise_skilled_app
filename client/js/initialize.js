@@ -7,7 +7,7 @@ fetch('/api/profiles')
   .then(res => res.json())
   .then(profiles => {
     state.profiles = profiles
-    renderNavBarMobileWhenNotLoggedIn()
+    renderNavBarMobileWhenNotLoggedIn() //Error starts here
     renderNavWhenNotLogin()
     renderProfileList()
   })
