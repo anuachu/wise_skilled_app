@@ -8,8 +8,9 @@ function renderProfileList() {
     </section>
   `
 }  
-    
-  function renderProfiles() {  
+
+
+function renderProfiles() {  
     
   return state.profiles.map(profile =>`
       <section class='profile' data-id='${profile.id}'>
