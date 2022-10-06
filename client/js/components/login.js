@@ -36,10 +36,10 @@ function login(event) {
         renderError(res.error)
       }else {
         const userName = res
-        if(state.loggedInUserName == userName){
-          renderNavBar()
+        state.loggedInUserName == userName
+          
           renderProfileList()
-        }
+        
         
       }
     })
