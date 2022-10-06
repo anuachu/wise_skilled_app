@@ -3,7 +3,7 @@
 }
 
 body {
-  margin: 0 2rem;
+  
   background-color: #062f46;
   /* background-color: #F6F6F2; */
   font-family: 'Exo', sans-serif;
@@ -21,17 +21,12 @@ body {
 .home {
   padding: 0 20px;
   background-color: #005586;
-  /* background-color: #774A62; */
   height: 90px;
   display: flex;
   justify-content: space-between;
+  
 }
 
-
-h2 {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
 
 form {
   max-width: 700px;
