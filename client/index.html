@@ -26,6 +26,7 @@
   <script defer src="/js/components/edit_profile.js"></script>
   <script defer src="/js/components/sign_up.js"></script>
   <script defer src="/js/components/login.js"></script>
+  <script defer src="/js/components/nav_bar.js"></script>
 
 
 </head>
@@ -33,40 +34,17 @@
 <body>
   <header class="home">
     <div id="logo"><a href="/">Wise Skills</a></div>
-    
-    <nav class="header-nav">
-      <ul>
-        <li onClick="renderProfileList()"> <span class="material-symbols-outlined edit-profile" >home</span> Home
-        </li>
-        <li onClick="renderAddProfile()"> <span class="material-symbols-outlined edit-profile" >add_circle</span> Add Profile
-        </li>
-        <li onClick="renderSignUp()"> <span class="material-symbols-outlined edit-profile" >person_add</span> Sign-Up
-        </li>
-        <li onClick="renderLogin()"> <span class="material-symbols-outlined edit-profile" >account_circle</span> Login
-        </li>
-        <li onClick="renderEditProfile()"> <span class="material-symbols-outlined edit-profile" >edit</span> Edit Profile
-        </li>
-      </ul>
-    </nav>
-    <div id="hamburguer-icon" onclick="toggleMobileMenu(this)">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-      <ul class="mobile-menu">
-        <li onClick="renderProfileList()">Home</li>
-        <li onClick="renderAddProfile()">Add profile</li>
-        <li onClick="renderSignUp()">Sign-Up</li>
-        <li onClick="renderLogin()">Login</li>
-        <li onClick="renderEditProfile()">Edit</li>
-      </ul>
-    </div>    
-</header>
+    <main id="nav" class="content"></main>
+    <div id = "mobile_nav" ></div>
+  </header>
  
 <script src="index_mobile.js"></script> 
 
+
+
 <main id="page" class="content"></main>
 <footer>
-  <h4></h4>
+  <h4 class="footer">Call us: 1800 123 456</h4>
   <h5>© 2022 JAA Team, Adelaide. Australia</h5>
 
 </footer>

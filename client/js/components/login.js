@@ -21,7 +21,6 @@ function login(event) {
   event.preventDefault()
   const form = event.target
 
-  // takes data from the form html tag and converts it into an object literal.
   const data = Object.fromEntries(new FormData(form))
 
   fetch('/api/sessions', {
@@ -37,7 +36,11 @@ function login(event) {
       }else {
         const userName = res
         state.loggedInUserName = userName
+        if(state.loggedInUserName == userName){
+        renderNavBar()
+        renderNavBarMobile()
         renderProfileList()
+        }
       }
     })
 }
@@ -47,4 +50,11 @@ function renderError(errorMessage) {
   page.innerHTML =
     `<h2 style='color: red;'>${errorMessage}</h2>` +
     page.innerHTML
+}
+
+function renderLogout() {
+  state.loggedInUserName = null
+  renderNavBarMobileWhenNotLoggedIn()
+  renderNavWhenNotLogin()
+  renderProfileList()
 }
