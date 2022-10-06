@@ -1,14 +1,14 @@
 function renderEditProfile() {
   const profileListDOM = document.querySelector('#page')
 
-console.log(state.loggedInUserName)
+  console.log(state.loggedInUserName)
 
   const matchingAuthors = state.profiles.filter(function (profile){
     return profile.author == state.loggedInUserName
   })
 
   console.log(matchingAuthors) 
-//TEsting Comment
+//Testing Comment
 //********************* */
   profileListDOM.innerHTML =
   matchingAuthors.map(profile =>
