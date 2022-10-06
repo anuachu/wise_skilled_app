@@ -1,8 +1,9 @@
 function renderProfileList() {
   document.querySelector('#page').innerHTML = `
-    <p class="page-description">Wise skills empowers Seniors to demonstrate that experience and wisdom are limitless.</p>
-    <h4>Let people to hire you. Sign-up today!</h4> 
-  
+    <div class="banner">
+      <p class="page-description">Wise skills empowers Seniors to demonstrate that experience and wisdom are limitless.</p>
+      <h4>Let people to hire you. Sign-up today!</h4> 
+    </div>
     <section class='profile-list'>
       ${renderProfiles()}
     </section>
