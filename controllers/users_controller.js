@@ -19,7 +19,7 @@ router.post('/', (req, res) => {
       if(password.length >= 8){
         res.json(userName)
       }else{
-        res.status(400).json({error: 'Make sure the password is atleast 8 character long'})
+        res.status(400).json({error: 'Your password must be at least 8 characters long'})
       }
       
     })

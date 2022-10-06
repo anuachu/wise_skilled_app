@@ -1,7 +1,7 @@
 function renderProfileList() {
   document.querySelector('#page').innerHTML = `
     <p class="page-description">Wise skills empowers Seniors to demonstrate that experience and wisdom are limitless.</p>
-    <h4>Sign-up today, and find task to complete!</h4> 
+    <h4>Let people to hire you. Sign-up today!</h4> 
   
     <section class='profile-list'>
       ${renderProfiles()}
@@ -19,7 +19,7 @@ function renderProfileList() {
         <p>${profile.skills_summary}</p>
         <img src="${profile.profile_img}">
         <h3 class="location">Location: ${profile.location}</h3>
-        <h3 class="rate">Rate: ${profile.rate}</h3>
+        <h3 class="rate">Rate: $ ${profile.rate} aud</h3>
         <h3 class="contact">Contact: ${profile.contact}</h3>
       </header>
       </section>

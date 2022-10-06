@@ -38,7 +38,7 @@
 .delete {
   color: rgb(244, 132, 132);
   list-style: none;
-  text-align: right;
+  margin-left: 80%;
   max-width: max-content;
 }
 
@@ -47,4 +47,8 @@
   transform: scale(1.1);
   transition: 0.3s;
  
+}
+
+.error {
+  text-align: center;
 }

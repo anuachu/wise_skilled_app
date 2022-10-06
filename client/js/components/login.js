@@ -48,7 +48,7 @@ function login(event) {
 function renderError(errorMessage) {
   const page = document.querySelector('#page')
   page.innerHTML =
-    `<h2 style='color: red;'>${errorMessage}</h2>` +
+    `<h2 class="error" style='color: red;'>${errorMessage}</h2>` +
     page.innerHTML
 }
 

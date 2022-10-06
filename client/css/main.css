@@ -39,12 +39,12 @@ h4 {
   border: 0 solid;
   color: #F6F6F2;
   background-color: #00558692;
-  max-width: 70%;
+  max-width: 60%;
   padding-top: 3%;
   padding-bottom: 3%;
   border-radius: 3px;
   text-align: center;
-  margin-left: 15%;
+  margin-left: 20%;
 }
 
 footer, .footer {
@@ -118,7 +118,8 @@ form input {
   height: calc(100vh - 50px);
   width: 100%;
   border: 0px solid red;
-  background-color: #042436e2;
+  border-radius: 3px;
+  background-color: #042436ee;
   height: auto;
   list-style: none;
 }
