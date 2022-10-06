@@ -27,6 +27,9 @@ function renderAddProfile() {
         <label for="">Contact: </label>
         <input type="text" name="contact">
       </fieldset>
+      <fieldset>
+      <input type="hidden" name="author" value="${state.loggedInUserName}" />
+      </fieldset>
       <button>Add Profile</button>
     </form>
   </section>

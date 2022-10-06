@@ -9,14 +9,14 @@ const Profile = {
       .then(dbRes => dbRes.rows)
   },
 
-  create: (headline, skills_summary, location, profile_img, rate, contact) => {
+  create: (headline, skills_summary, location, profile_img, rate, contact, author) => {
     const sql = `
-      INSERT INTO profiles(headline, skills_summary, location, profile_img, rate, contact)
-      VALUES ($1, $2, $3, $4, $5, $6)
+      INSERT INTO profiles(headline, skills_summary, location, profile_img, rate, contact, author)
+      VALUES ($1, $2, $3, $4, $5, $6, $7)
       RETURNING *
     `
     return db
-      .query(sql, [headline, skills_summary, location, profile_img, rate, contact])
+      .query(sql, [headline, skills_summary, location, profile_img, rate, contact, author])
       .then(dbRes => dbRes.rows[0])
   
   },
