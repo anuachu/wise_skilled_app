@@ -5,7 +5,7 @@ function renderProfileList() {
       ${renderProfiles()}
     </section>
   `
-}   
+}  
     
   function renderProfiles() {  
     
@@ -13,6 +13,7 @@ function renderProfileList() {
       <section class='profile' data-id='${profile.id}'>
         <header>
           <h2>${profile.headline}</h2>
+          <p>${profile.author}</p>
           <span onClick="renderEditProfile(${profile.id})">edit</span>
           <span onClick="deleteProfile(event)">delete</span>
         </header>

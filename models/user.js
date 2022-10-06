@@ -32,6 +32,7 @@ const User = {
       .query(sql, [id])
       .then(dbRes => dbRes.rows[0].email)
   }
+  
 }
 
 module.exports = User

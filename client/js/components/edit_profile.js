@@ -1,12 +1,21 @@
-function renderEditProfile(profileId) {
+function renderEditProfile() {
   const profileListDOM = document.querySelector('#page')
+
+console.log(state.loggedInUserName)
+
+  const matchingAuthors = state.profiles.filter(function (profile){
+    return profile.author == state.loggedInUserName
+  })
+
+  console.log(matchingAuthors) 
+
+//********************* */
   profileListDOM.innerHTML =
-  state.profiles.map(profile =>
+  matchingAuthors.map(profile =>
   `<section class="profile">
     <form onSubmit="updateProfile(event)">
-      <h2>Edit product</h2>
+      <h2>Edit Profile</h2>
       <fieldset>
-      <h2>${profile.id}</h2>
       <label for="">Headline: </label>
       <input type="text" name="headline" value="${profile.headline}">
     </fieldset>
@@ -30,7 +39,7 @@ function renderEditProfile(profileId) {
       <label for="">Contact: </label>
       <input type="text" name="contact" value="${profile.contact}">
     </fieldset>
-        <input type="hidden" name="id" value="${profileId}">
+        <input type="hidden" name="id" value="${profile.id}"> 
         <button type="submit">Update product</button>
     </form>
   </section>

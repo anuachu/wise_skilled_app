@@ -12,10 +12,10 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  const { headline, skills_summary, location, profile_img, rate, contact } = req.body
+  const { headline, skills_summary, location, profile_img, rate, contact, author } = req.body
 
   Profile
-    .create(headline, skills_summary, location, profile_img, rate, contact)
+    .create(headline, skills_summary, location, profile_img, rate, contact, author)
     .then(profile => res.json(profile))
 })
 
@@ -37,11 +37,13 @@ router.delete('/:id', (req, res) => {
 
 router.put('/:id', (req,res) => {
   const profileId = req.params.id
-  const { headline, skills_summary, location, profile_img, rate, contact } = req.body
-  
+  const { headline, skills_summary, location, profile_img, rate, contact, author } = req.body
+
   Profile
-    .update_profile(profileId,headline, skills_summary, location, profile_img, rate, contact ) 
+    .update_profile(profileId,headline, skills_summary, location, profile_img, rate, contact, author ) 
     .then(profile => res.json(profile))
-})
+}),
+
+
 
 module.exports = router
