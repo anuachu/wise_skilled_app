@@ -18,9 +18,9 @@ function renderProfileList() {
         </header>
         <p>${profile.skills_summary}</p>
         <img src="${profile.profile_img}">
-        <h3>${profile.location}</h3>
-        <h3>${profile.rate}</h3>
-        <h3>${profile.contact}</h3>
+        <h3 class="location">Location: ${profile.location}</h3>
+        <h3 class="rate">Rate: ${profile.rate}</h3>
+        <h3 class="contact">Contact: ${profile.contact}</h3>
 
       </section>
     `).join('')

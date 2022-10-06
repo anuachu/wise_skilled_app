@@ -3,8 +3,11 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-around;
-}
 
+}
+.logo {
+  align-items: center;
+}
 ul li {
   padding: 5px;
   margin-left: 10px;
@@ -14,8 +17,7 @@ ul li {
   justify-content: space-between;
 }
 .header-nav ul {
-  display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   list-style-type: none;
   align-items: center;
  
@@ -26,14 +28,14 @@ ul li {
   padding: 4px;
   cursor: pointer;
   color: white;
-  border: 0px solid #774A62;
-  background-color: #774A62;
-  border-radius: 5px;
+  border: 0px solid #005586;
+  background-color: #005586;
+  border-radius: 3px;
   
 }
 
 .header-nav li:hover {
-  background-color: #935877;
+  background-color: #2d85b8;
   transform: scale(1.1);
   transition: 0.3s;
  
