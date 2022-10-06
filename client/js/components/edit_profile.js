@@ -13,7 +13,7 @@ function renderEditProfile() {
   profileListDOM.innerHTML =
   matchingAuthors.map(profile =>
   `<section class="profile-edit" data-id='${profile.id}'>
-    <li class="delete"onClick="deleteProfile(event)"> <span class="material-symbols-outlined edit-profile" >delete</span> Delete </li> 
+    <li class="delete" onClick="deleteProfile(event)"> <span class="material-symbols-outlined edit-profile" >delete</span> Delete </li> 
     <form onSubmit="updateProfile(event)" class="editing"> 
       <h2>Edit Profile</h2>
       <fieldset>
@@ -69,6 +69,8 @@ function updateProfile(event) {
       .then(res => res.json())
       .then(profile => {
         state.profiles[profileIndex] = profile
+        // state.profiles.push(profile)
+        console.log(profileIndex)
         renderProfileList()
     })
 }
