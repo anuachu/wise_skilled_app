@@ -38,7 +38,7 @@ function signUp(event) {
         renderSignUp()
         renderError(userName.error)
       }else{
-      state.loggedInUserName = userName
+      // state.loggedInUserName = userName
       renderProfileList()
       }
     })
