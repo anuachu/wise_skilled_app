@@ -8,11 +8,12 @@ console.log(state.loggedInUserName)
   })
 
   console.log(matchingAuthors) 
-
+//TEsting Comment
 //********************* */
   profileListDOM.innerHTML =
   matchingAuthors.map(profile =>
-  `<section class="profile">
+  `<section class="profile" data-id='${profile.id}'>
+      <span onClick="deleteProfile(event)">delete</span>
     <form onSubmit="updateProfile(event)">
       <h2>Edit Profile</h2>
       <fieldset>
@@ -69,5 +70,19 @@ function updateProfile(event) {
       .then(profile => {
         state.profiles[profileIndex] = profile
         renderProfileList()
+    })
+}
+
+function deleteProfile(event) {
+  const deleteBtn = event.target
+  const profileDOM = deleteBtn.closest('.profile')
+  const profileId = profileDOM.dataset.id
+
+  fetch(`/api/profiles/${profileId}`, {
+    method: 'DELETE'
+  })
+    .then(() => {
+      state.profiles = state.profiles.filter(p => p.id != profileId)
+      renderProfileList()
     })
 }
