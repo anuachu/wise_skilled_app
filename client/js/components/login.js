@@ -37,11 +37,8 @@ function login(event) {
       }else {
         const userName = res
         state.loggedInUserName == userName
-          
           renderProfileList()
-        
-        
-      }
+        }
     })
 }
 
