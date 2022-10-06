@@ -21,3 +21,30 @@
   padding-bottom: 10%;
   color: #F6F6F2;
 }
+
+.editing {
+  padding-bottom: 5%;
+  /* background-color: #fbd2c9a2; */
+}
+
+.profile-edit {
+  background-color: #0055866d;
+  border: 0px solid whitesmoke;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  color: #F6F6F2;
+}
+
+.delete {
+  color: rgb(244, 132, 132);
+  list-style: none;
+  text-align: right;
+  max-width: max-content;
+}
+
+.delete:hover {
+  background-color: #2d85b8;
+  transform: scale(1.1);
+  transition: 0.3s;
+ 
+}

@@ -12,36 +12,36 @@ function renderEditProfile() {
 //********************* */
   profileListDOM.innerHTML =
   matchingAuthors.map(profile =>
-  `<section class="profile" data-id='${profile.id}'>
-      <span onClick="deleteProfile(event)">delete</span>
-    <form onSubmit="updateProfile(event)">
+  `<section class="profile-edit" data-id='${profile.id}'>
+    <li class="delete"onClick="deleteProfile(event)"> <span class="material-symbols-outlined edit-profile" >delete</span> Delete </li> 
+    <form onSubmit="updateProfile(event)" class="editing"> 
       <h2>Edit Profile</h2>
       <fieldset>
-      <label for="">Headline: </label>
-      <input type="text" name="headline" value="${profile.headline}">
-    </fieldset>
-    <fieldset>
-      <label for="">Skills summary: </label>
-      <input type="text" name="skills_summary" value="${profile.skills_summary}">
-    </fieldset>
-    <fieldset>
-      <label for="">Location: </label>
-      <input type="text" name="location" value="${profile.location}" >
-    </fieldset>
-    <fieldset>
-      <label for="">Profile photo: </label>
-      <input type="text" name="profile_img" value="${profile.profile_img}">
-    </fieldset>
-    <fieldset>
-      <label for="">Rate: </label>
-      <input type="text" name="rate" value="${profile.rate}">
-    </fieldset>
-    <fieldset>
-      <label for="">Contact: </label>
-      <input type="text" name="contact" value="${profile.contact}">
-    </fieldset>
+        <label for="">Headline: </label>
+        <input type="text" name="headline" value="${profile.headline}">
+      </fieldset>
+      <fieldset>
+        <label for="">Skills summary: </label>
+        <input type="text" name="skills_summary" value="${profile.skills_summary}">
+      </fieldset>
+      <fieldset>
+        <label for="">Location: </label>
+        <input type="text" name="location" value="${profile.location}" >
+      </fieldset>
+      <fieldset>
+        <label for="">Profile photo: </label>
+        <input type="text" name="profile_img" value="${profile.profile_img}">
+      </fieldset>
+      <fieldset>
+        <label for="">Rate: </label>
+        <input type="text" name="rate" value="${profile.rate}">
+      </fieldset>
+      <fieldset>
+        <label for="">Contact: </label>
+        <input type="text" name="contact" value="${profile.contact}">
+      </fieldset>
         <input type="hidden" name="id" value="${profile.id}"> 
-        <button type="submit">Update product</button>
+        <button type="submit">Update profile</button>
     </form>
   </section>
 `)
