@@ -26,6 +26,27 @@ body {
   justify-content: space-between; 
 }
 
+.page-description {
+  color: #F6F6F2;
+  font-family: 'Bai Jamjuree', sans-serif;
+  width: 70%;
+  font-size: 2rem;
+  text-align: center;
+  margin-left: 10%;
+  
+}
+h4 {
+  border: 0 solid;
+  color: #F6F6F2;
+  background-color: #005586;
+  max-width: 70%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  border-radius: 3px;
+  text-align: center;
+  margin-left: 10%;
+}
+
 form {
   max-width: 700px;
   margin: 0 auto;
