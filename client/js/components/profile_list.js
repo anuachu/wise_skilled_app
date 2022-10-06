@@ -1,6 +1,8 @@
 function renderProfileList() {
   document.querySelector('#page').innerHTML = `
-
+    <p class="page-description">Wise skills empowers Seniors to demonstrate that experience and wisdom are limitless.</p>
+    <h4>Sign-up today, and find task to complete!</h4> 
+  
     <section class='profile-list'>
       ${renderProfiles()}
     </section>
