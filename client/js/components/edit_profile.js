@@ -1,25 +1,21 @@
-const getAuthor =
-
 function renderEditProfile() {
   const profileListDOM = document.querySelector('#page')
 
-  const author = 
-  //Need to get author column from profiles database
-  
-  console.log(state.loggedInUserName) // Works when logged in, can use in if statement
+console.log(state.loggedInUserName)
 
-  //if state.loggedInUserName matches author colomn render those posts for that author.
+  const matchingAuthors = state.profiles.filter(function (profile){
+    return profile.author == state.loggedInUserName
+  })
 
-  console.log(author) //Testing
-  // if (state.loggedInUserName == author){}
+  console.log(matchingAuthors) 
+
 //********************* */
   profileListDOM.innerHTML =
-  state.profiles.map(profile => //map may not be the right option for this
+  matchingAuthors.map(profile =>
   `<section class="profile">
     <form onSubmit="updateProfile(event)">
-      <h2>Edit product</h2>
+      <h2>Edit Profile</h2>
       <fieldset>
-      <h2>${profile.id}</h2>
       <label for="">Headline: </label>
       <input type="text" name="headline" value="${profile.headline}">
     </fieldset>
