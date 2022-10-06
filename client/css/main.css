@@ -23,10 +23,8 @@ body {
   background-color: #005586;
   height: 90px;
   display: flex;
-  justify-content: space-between;
-  
+  justify-content: space-between; 
 }
-
 
 form {
   max-width: 700px;

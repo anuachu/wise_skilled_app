@@ -4,6 +4,7 @@
   gap: 1rem;
   margin: 0 2rem;
   margin-top: 30%;
+  justify-content: space-around;
 }
 
 .profile {
@@ -16,7 +17,6 @@
 }
 h2 {
   font-family: 'Bai Jamjuree', sans-serif;
-  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
