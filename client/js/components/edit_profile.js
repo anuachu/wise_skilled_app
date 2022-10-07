@@ -51,15 +51,15 @@ function updateProfile(event) {
   event.preventDefault()
   const form = event.target 
   const data = Object.fromEntries(new FormData(form))
-  const profileId = data.id
-  var profileIndex = null
+  const profileId = data.id //
+  // var profileIndex = null //Not sure if needed
 
-  state.profiles.forEach((profile, index) => {
-    if(profile.id === profileId){
-      profileIndex = index
-    }
-    return profileIndex
-  })
+  // state.profiles.forEach((profile, index) => {
+  //   if(profile.id === profileId){
+  //     profileIndex = index
+  //   }
+  //   return profileIndex
+  // })
 
   fetch(`/api/profiles/${profileId}`, {
       method: 'PUT',
@@ -67,17 +67,20 @@ function updateProfile(event) {
       body: JSON.stringify(data)
     })
       .then(res => res.json())
-      .then(profile => {
-        state.profiles[profileIndex] = profile
-        // state.profiles.push(profile)
-        console.log(profileIndex)
-        renderProfileList()
+      .then(res => {
+        // console.log(res) //undefined
+        // console.log(form)
+        // console.log(data)
+        // console.log(profileId)
+        state.profiles.push(data)//This isnt pushing ID
+        console.log(state.profiles) 
+        renderProfileList() 
     })
 }
 
 function deleteProfile(event) {
   const deleteBtn = event.target
-  const profileDOM = deleteBtn.closest('.profile')
+  const profileDOM = deleteBtn.closest('.profile-edit')
   const profileId = profileDOM.dataset.id
 
   fetch(`/api/profiles/${profileId}`, {
