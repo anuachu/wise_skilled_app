@@ -27,11 +27,6 @@ const Profile = {
     `
     return db.query(sql, [profileId])
   },
-  // get_profile: (profileId) => {
-  //   const sql = `SELECT * FROM profiles WHERE id = $1`
-
-  //   return db.query(sql, [profileId])
-  // },
   update_profile: (profileId, headline, skills_summary, location, profile_img, rate, contact) => {
     const sql = `UPDATE profiles SET headline = $2, skills_summary= $3, location= $4 ,profile_img= $5, rate=$6,contact=$7 WHERE id = $1`
 
