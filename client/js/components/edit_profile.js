@@ -66,16 +66,29 @@ function updateProfile(event) {
       headers: {'Content-Type': 'application/json'}, 
       body: JSON.stringify(data)
     })
-      .then(res => res.json())
-      .then(res => {
-        // console.log(res) //undefined
-        // console.log(form)
-        // console.log(data)
-        // console.log(profileId)
-        state.profiles.push(data)//This isnt pushing ID
-        console.log(state.profiles) 
-        renderProfileList() 
-    })
+    //   .then(res => res.json())
+    //   .then(profile => {
+    //     // console.log(res) //undefined
+    //     // console.log(form)
+    //     // console.log(data)
+    //     // console.log(profileId)
+    //     state.profiles = state.profiles.filter(p => p.id != profileId)
+    //     // state.profiles.push(data)//This isnt pushing ID
+    //     state.profiles[state.profiles.id] = profile
+    //     console.log(state.profiles) 
+    //     renderProfileList() 
+    // })
+    .then(data => {
+      // console.log(profiles) //undefined
+      // console.log(form)
+      // console.log(data)
+      // console.log(profileId)
+      state.profiles = state.profiles.filter(p => p.id != profileId)//
+      state.profiles.push(data)//This isnt pushing ID
+      // state.profiles[state.profiles.id] = data
+      console.log(state.profiles) 
+      renderProfileList() 
+  })
 }
 
 function deleteProfile(event) {
