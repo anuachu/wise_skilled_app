@@ -26,38 +26,35 @@ body {
   justify-content: space-between; 
 }
 .banner {
-  border: 1px solid black;
+  border: 1px solid;
   width: 65%;
   height: 500%;
   background-image: url(https://plus.unsplash.com/premium_photo-1661286669112-828990cb16a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
   background-blend-mode:multiply;
-  background-color: #062f4663;
-  /* object-fit: cover; */
-  background-size: 120%;
+  background-color: #062f46ae;
+  object-fit: cover;
+  background-size: 110%;
   background-repeat: no-repeat;
   text-align: center;
   margin-left: 20%;
   margin-top: 5%;
+
 }
-.banner::after {
-  border: 1px solid black;
-  width: 65%;
-  height: 500%;
-  background-color: #062f46d5;
-}
+
 .page-description {
   color: #F6F6F2;
   font-family: 'Bai Jamjuree', sans-serif;
-  width: 70%;
+  text-shadow: 2px 2px 2px #000000e4;
+  width: 50%;
   font-size: 2rem;
   text-align: center;
-  margin-left: 15%;
+  margin-left: 25%;
 }
 
 h4 {
   border: 0 solid;
   color: #F6F6F2;
-  background-color: #00558692;
+  background-color: #005586d3;
   max-width: 60%;
   padding-top: 3%;
   padding-bottom: 3%;
